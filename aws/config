@@ -1,0 +1,195 @@
+[default]
+region = us-west-2
+[profile AWSAdministratorAccess-573123634485]
+sso_session = Lytx
+sso_account_id = 573123634485
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[sso-session Lytx]
+sso_start_url = https://d-92670a73b3.awsapps.com/start#/
+sso_region = us-west-2
+sso_registration_scopes = sso:account:access
+[profile Network]
+sso_session = Lytx
+sso_account_id = 069442728920
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile NOC]
+sso_session = Lytx
+sso_account_id = 141235785615
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile AML-IN]
+sso_session = Lytx
+sso_account_id = 348177222720
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Audit]
+sso_session = Lytx
+sso_account_id = 465774134404
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile ci-cd-ami]
+sso_session = Lytx
+sso_account_id = 997576832764
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile DataPipe-Prod]
+sso_session = Lytx
+sso_account_id = 633208015386
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile DataPipe-SBX]
+sso_session = Lytx
+sso_account_id = 159268555920
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile DataPipe-Stg]
+sso_session = Lytx
+sso_account_id = 554392508187
+sso_role_name = AWSAdministratorAccess
+[profile DataPipe-Dev]
+sso_session = Lytx
+sso_account_id = 709674230786
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile DataPlatform-Dev]
+sso_session = Lytx
+sso_account_id = 882722670804
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile DataPlatform-Prod]
+sso_session = Lytx
+sso_account_id = 407799361832
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile DataPlatform-Stg]
+sso_session = Lytx
+sso_account_id = 746068287266
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Developer-Sandbox]
+sso_session = Lytx
+sso_account_id = 557335287591
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile ELD-Dev]
+sso_session = Lytx
+sso_account_id = 405412538276
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Infra-Pipeline-Dev]
+sso_session = Lytx
+sso_account_id = 357224101238
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Infra-Pipeline-Prod]
+sso_session = Lytx
+sso_account_id = 111982042471
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Infra-Pipeline-SBX]
+sso_session = Lytx
+sso_account_id = 335448479306
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Infra-Pipeline-Stg]
+sso_session = Lytx
+sso_account_id = 808721409925
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile kong]
+sso_session = Lytx
+sso_account_id = 063342329660
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Lab]
+sso_session = Lytx
+sso_account_id = 315456707986
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Log-archive]
+sso_session = Lytx
+sso_account_id = 106363869689
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile MicroServices-Dev]
+sso_session = Lytx
+sso_account_id = 856217656037
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile MicroServices-Prod]
+sso_session = Lytx
+sso_account_id = 993720144166
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Microservices-SBX]
+sso_session = Lytx
+sso_account_id = 088602178575
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile MicroServices-Stg]
+sso_session = Lytx
+sso_account_id = 251161766258
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Payer]
+sso_session = Lytx
+sso_account_id = 726163105069
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Pipeline-Prod]
+sso_session = Lytx
+sso_account_id = 343465544402
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Pipeline-Dev]
+sso_session = Lytx
+sso_account_id = 851146394722
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Pipeline-SBX]
+sso_session = Lytx
+sso_account_id = 014357264357
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Pipeline-Stg)]
+sso_session = Lytx
+sso_account_id = 078668785463
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Surf-Dev]
+sso_session = Lytx
+sso_account_id = 674993406316
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Surf-Int]
+sso_session = Lytx
+sso_account_id = 553802096047
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Surf-Perf]
+sso_session = Lytx
+sso_account_id = 781310193679
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Surf-Pipeline-Int]
+sso_session = Lytx
+sso_account_id = 822148134715
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Surf-Prod-EU]
+sso_session = Lytx
+sso_account_id = 981125761498
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Surf-Prod-US]
+sso_session = Lytx
+sso_account_id = 276360278898
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
+[profile Surf-Stg]
+sso_session = Lytx
+sso_account_id = 917369764603
+sso_role_name = AWSAdministratorAccess
+region = us-west-2
