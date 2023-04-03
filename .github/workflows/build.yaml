@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - infra/atlantis
+      - 'infra/atlantis/**'
 
 jobs:
   call-workflow-passing-data:
