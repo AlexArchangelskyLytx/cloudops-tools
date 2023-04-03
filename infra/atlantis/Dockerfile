@@ -24,6 +24,6 @@ RUN \
   mv /tmp/terramate /usr/bin/terramate
 
 # TODO: vault
-RUN \
-  curl -s -L ""  | tar xz -C /tmp && \
-  mv /tmp/terramate /usr/bin/terramate
+# RUN \
+#   curl -s -L ""  | tar xz -C /tmp && \
+#   mv /tmp/terramate /usr/bin/terramate
