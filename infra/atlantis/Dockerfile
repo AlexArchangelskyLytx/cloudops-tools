@@ -23,7 +23,7 @@ RUN \
   curl -s -L "https://github.com/mineiros-io/terramate/releases/download/${TERRAMATE_VERSION}/terramate_${TERRAMATE_VERSION#v}_linux_x86_64.tar.gz"  | tar xz -C /tmp && \
   mv /tmp/terramate /usr/bin/terramate
 
-# TODO: vault
+# vault
 # RUN \
 #   curl -s -L ""  | tar xz -C /tmp && \
 #   mv /tmp/terramate /usr/bin/terramate
