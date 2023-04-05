@@ -1,3 +1,4 @@
+---
 name: Docker Build
 
 on:
@@ -9,6 +10,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: lytxinc/lytx-workflows/.github/workflows/reusable-dockerfile-test-build.yml@master
+    uses: lytxinc/lytx-workflows/.github/workflows/reusable-dockerfile-test-build.yml@set-context
     with:
       image_name: atlantis
+      image_context: './infra/atlantis'
