@@ -1,0 +1,16 @@
+---
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'infra/atlantis/**'
+
+jobs:
+  call-workflow-passing-data:
+    uses: lytxinc/lytx-workflows/.github/workflows/reusable-dockerfile-build-push.yml@set-context
+    with:
+      image_name: atlantis
+      image_context: './infra/atlantis'
