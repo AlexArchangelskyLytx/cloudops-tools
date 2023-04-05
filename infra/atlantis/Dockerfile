@@ -4,6 +4,9 @@ ENV ATLANTIS_CFG_VERSION=v1.16.0
 ENV INFRACOST_VERSION=v0.10.17
 ENV TERRAGRUNT_VERSION=v0.43.3
 ENV TERRAMATE_VERSION=v0.2.12
+ENV VAULT_VERSION=v1.13.1
+
+RUN apk add --no-cache vault
 
 # infracost
 RUN \
@@ -22,8 +25,3 @@ RUN curl -s -L "https://github.com/transcend-io/terragrunt-atlantis-config/relea
 RUN \
   curl -s -L "https://github.com/mineiros-io/terramate/releases/download/${TERRAMATE_VERSION}/terramate_${TERRAMATE_VERSION#v}_linux_x86_64.tar.gz"  | tar xz -C /tmp && \
   mv /tmp/terramate /usr/bin/terramate
-
-# vault
-# RUN \
-#   curl -s -L ""  | tar xz -C /tmp && \
-#   mv /tmp/terramate /usr/bin/terramate
