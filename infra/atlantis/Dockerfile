@@ -7,6 +7,7 @@ ENV TERRAMATE_VERSION=v0.2.12
 
 RUN apk add --no-cache vault
 
+
 # infracost
 RUN \
   curl -s -L https://github.com/infracost/infracost/releases/download/${INFRACOST_VERSION}/infracost-linux-amd64.tar.gz | tar xz -C /tmp && \
