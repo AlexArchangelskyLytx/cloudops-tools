@@ -6,11 +6,11 @@ on:
     branches:
       - main
     paths:
-      - 'infra/atlantis/**'
+      - 'k8s/atlantis/**'
 
 jobs:
   call-workflow-passing-data:
     uses: lytxinc/lytx-workflows/.github/workflows/reusable-dockerfile-build-push.yml@set-context
     with:
       image_name: atlantis
-      image_context: './infra/atlantis'
+      image_context: './k8s/atlantis'

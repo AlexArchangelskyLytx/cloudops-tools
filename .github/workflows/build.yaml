@@ -2,15 +2,13 @@
 name: Docker Build
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
     paths:
-      - 'infra/atlantis/**'
+      - 'k8s/atlantis/**'
 
 jobs:
   call-workflow-passing-data:
     uses: lytxinc/lytx-workflows/.github/workflows/reusable-dockerfile-test-build.yml@set-context
     with:
       image_name: atlantis
-      image_context: './infra/atlantis'
+      image_context: './k8s/atlantis'
