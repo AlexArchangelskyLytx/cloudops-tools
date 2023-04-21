@@ -5,7 +5,6 @@ ENV INFRACOST_VERSION=v0.10.17
 ENV TERRAGRUNT_VERSION=v0.43.3
 ENV TERRAMATE_VERSION=v0.2.12
 
-
 RUN apk add --no-cache vault
 
 # infracost
