@@ -6,6 +6,7 @@ ENV TERRAGRUNT_VERSION=v0.43.3
 ENV TERRAMATE_VERSION=v0.2.12
 
 RUN apk add --no-cache vault
+RUN setcap cap_ipc_lock= /usr/bin/vault
 
 # infracost
 RUN curl -s -L https://github.com/infracost/infracost/releases/download/${INFRACOST_VERSION}/infracost-linux-amd64.tar.gz | tar xz -C /tmp && \
@@ -25,3 +26,4 @@ RUN curl -s -L "https://github.com/mineiros-io/terramate/releases/download/${TER
 
 # Prepare the plugin cache directory ahead of time
 RUN mkdir -p /plugins && chown -R atlantis:atlantis /plugins
+RUN mkdir -p /home/atlantis/.ssh && chown -R atlantis:atlantis /home/atlantis/.ssh
