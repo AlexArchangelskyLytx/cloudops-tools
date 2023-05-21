@@ -5,7 +5,7 @@ ENV INFRACOST_VERSION=v0.10.17
 ENV TERRAGRUNT_VERSION=v0.43.3
 ENV TERRAMATE_VERSION=v0.2.12
 
-RUN apk add --no-cache vault
+RUN apk add --no-cache aws-cli vault
 RUN setcap cap_ipc_lock= /usr/sbin/vault
 
 # infracost
