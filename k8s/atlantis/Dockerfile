@@ -1,4 +1,4 @@
-FROM ghcr.io/runatlantis/atlantis:v0.23.5
+FROM ghcr.io/runatlantis/atlantis:v0.24.1
 
 ENV ATLANTIS_CFG_VERSION=v1.16.0
 ENV INFRACOST_VERSION=v0.10.17
@@ -27,3 +27,5 @@ RUN curl -s -L "https://github.com/mineiros-io/terramate/releases/download/${TER
 # Prepare the plugin cache directory ahead of time
 RUN mkdir -p /plugins && chown -R atlantis:atlantis /plugins
 RUN mkdir -p /home/atlantis/.ssh && chown -R atlantis:atlantis /home/atlantis/.ssh
+
+RUN rm -rf /tmp/*
