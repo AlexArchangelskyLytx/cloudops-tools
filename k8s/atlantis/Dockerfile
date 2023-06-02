@@ -1,4 +1,4 @@
-FROM ghcr.io/runatlantis/atlantis:v0.24.1
+FROM ghcr.io/runatlantis/atlantis:v0.24.2
 
 ENV ATLANTIS_CFG_VERSION=v1.16.0
 ENV INFRACOST_VERSION=v0.10.17
