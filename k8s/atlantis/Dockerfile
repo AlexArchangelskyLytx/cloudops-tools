@@ -26,6 +26,7 @@ RUN curl -s -L "https://github.com/mineiros-io/terramate/releases/download/${TER
 
 # Prepare the plugin cache directory ahead of time
 RUN mkdir -p /plugins && chown -R atlantis:atlantis /plugins
+RUN mkdir -p /home/atlantis/.aws && chown -R atlantis:atlantis /home/atlantis/.aws
 RUN mkdir -p /home/atlantis/.ssh && chown -R atlantis:atlantis /home/atlantis/.ssh
 
 RUN rm -rf /tmp/*
