@@ -4,13 +4,10 @@
 # AWS_PROFILE needs to be payer - or run with aws-vault specifying the payer account
 # This will build kubeconfig from EKS clusters discovered via AWS Config using the aggregator
 
-
 build_kubeconfig() {
 
 eks_instances=$(aws configservice select-aggregate-resource-config --configuration-aggregator-name aws-controltower-ConfigAggregatorForOrganizations --expression "SELECT accountId,resourceId,awsRegion WHERE resourceType='AWS::EKS::Cluster'" --output text |grep -v SELECTFIELDS |awk '{print $2}') 
 
-
-#IFS=$'\n'
 for name in $eks_instances;do 
   accountId=$(echo "$name" |grep -v RESULTS|awk -F \" '{print $4}' )
   resourceId=$(echo "$name" |grep -v RESULTS |awk -F \" '{print $8}')
