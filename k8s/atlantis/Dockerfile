@@ -1,7 +1,7 @@
-FROM ghcr.io/runatlantis/atlantis:v0.24.2
+FROM ghcr.io/runatlantis/atlantis:v0.24.4
 
 ENV ATLANTIS_CFG_VERSION=v1.16.0
-ENV INFRACOST_VERSION=v0.10.17
+ENV INFRACOST_VERSION=v0.10.24
 ENV TERRAGRUNT_VERSION=v0.46.1
 ENV TERRAMATE_VERSION=v0.2.12
 
@@ -24,7 +24,7 @@ RUN curl -s -L "https://github.com/transcend-io/terragrunt-atlantis-config/relea
 RUN curl -s -L "https://github.com/mineiros-io/terramate/releases/download/${TERRAMATE_VERSION}/terramate_${TERRAMATE_VERSION#v}_linux_x86_64.tar.gz"  | tar xz -C /tmp && \
     mv /tmp/terramate /usr/bin/terramate
 
-# Prepare the plugin cache directory ahead of time
+# Prepare directories ahead of time
 RUN mkdir -p /plugins && chown -R atlantis:atlantis /plugins
 RUN mkdir -p /home/atlantis/.aws && chown -R atlantis:atlantis /home/atlantis/.aws
 RUN mkdir -p /home/atlantis/.ssh && chown -R atlantis:atlantis /home/atlantis/.ssh
