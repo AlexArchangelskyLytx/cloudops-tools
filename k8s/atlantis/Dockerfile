@@ -1,7 +1,8 @@
-FROM ghcr.io/runatlantis/atlantis:v0.24.4
+FROM ghcr.io/runatlantis/atlantis:v0.25.0
 
 ENV ATLANTIS_CFG_VERSION=v1.16.0
 ENV INFRACOST_VERSION=v0.10.24
+ENV KUBECTL_VERSION=v1.27.4
 ENV TERRAGRUNT_VERSION=v0.46.1
 ENV TERRAMATE_VERSION=v0.2.12
 
@@ -11,6 +12,10 @@ RUN setcap cap_ipc_lock= /usr/sbin/vault
 # infracost
 RUN curl -s -L https://github.com/infracost/infracost/releases/download/${INFRACOST_VERSION}/infracost-linux-amd64.tar.gz | tar xz -C /tmp && \
     mv /tmp/infracost-linux-amd64 /usr/bin/infracost
+
+# kubectl
+RUN curl -s -Lo kubectl https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl && \
+    chmod +x kubectl && mv kubectl /usr/local/bin
 
 # terragrunt
 RUN curl -s -Lo terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/${TERRAGRUNT_VERSION}/terragrunt_linux_amd64 && \
