@@ -65,7 +65,7 @@ def describe_asgs():
             logger.info(asg_name)
 
     logger.info("--------------------------------------------")
-    return asgs
+    return 
 
 
 def asg_in_vpc(asg):
@@ -245,7 +245,6 @@ def describe_subnets():
         logger.info(subnet)
 
     logger.info("--------------------------------------------")
-
     return
 
 
