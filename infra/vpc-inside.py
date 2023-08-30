@@ -65,7 +65,7 @@ def describe_asgs():
             logger.info(asg_name)
 
     logger.info("--------------------------------------------")
-    return
+    return asgs
 
 
 def asg_in_vpc(asg):
@@ -185,7 +185,8 @@ def describe_enis():
 
     logger.info("ENIs in VPC {}:".format(vpc_id))
     for eni in enis:
-        logger.info(eni)
+        ceni = f'\033[96m{eni}\033[00m'
+        logger.info(ceni)
 
     logger.info("--------------------------------------------")
     return
@@ -244,6 +245,7 @@ def describe_subnets():
         logger.info(subnet)
 
     logger.info("--------------------------------------------")
+
     return
 
 
@@ -317,9 +319,9 @@ if __name__ == '__main__':
         describe_elbsV2()
         describe_nats()
         describe_vpc_epts()
-        describe_igws()
         describe_vpgws()
         describe_enis()
+        describe_igws()
         describe_sgs()
         describe_rtbs()
         describe_acls()
