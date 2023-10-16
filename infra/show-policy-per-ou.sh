@@ -14,7 +14,7 @@ root_ou_id=$(aws organizations list-organizational-units-for-parent --parent-id 
 for ou_id in $root_ou_id; do
     ou_name=$(aws organizations describe-organizational-unit --organizational-unit-id $ou_id --query "OrganizationalUnit.Name" --output text |grep .)
     echo "SCP list for OU: $ou_name ($ou_id)"
-    aws organizations list-policies-for-target --target-id $ou_id --filter SERVICE_CONTROL_POLICY --query "Policies[*].Id" --output text |grep .
+    aws organizations list-policies-for-target --target-id $ou_id --filter SERVICE_CONTROL_POLICY --query "Policies[*].Name" --output text |grep .
      echo ""
 done
 
