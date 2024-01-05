@@ -1,12 +1,13 @@
-FROM ghcr.io/runatlantis/atlantis:v0.25.0
+FROM ghcr.io/runatlantis/atlantis:v0.27.0
 
 ENV ATLANTIS_CFG_VERSION=v1.16.0
-ENV INFRACOST_VERSION=v0.10.24
+ENV INFRACOST_VERSION=v0.10.28
 ENV KUBECTL_VERSION=v1.27.4
-ENV TERRAGRUNT_VERSION=v0.46.1
+ENV TERRAGRUNT_VERSION=v0.54.9
 ENV TERRAMATE_VERSION=v0.2.12
 
-RUN apk add --no-cache aws-cli vault
+USER root
+RUN apk add --no-cache aws-cli vault libcap-setcap --repository=http://dl-cdn.alpinelinux.org/alpine/v3.18/community
 RUN setcap cap_ipc_lock= /usr/sbin/vault
 
 # infracost
@@ -35,3 +36,4 @@ RUN mkdir -p /home/atlantis/.aws && chown -R atlantis:atlantis /home/atlantis/.a
 RUN mkdir -p /home/atlantis/.ssh && chown -R atlantis:atlantis /home/atlantis/.ssh
 
 RUN rm -rf /tmp/*
+USER atlantis
