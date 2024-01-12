@@ -7,7 +7,7 @@ ENV TERRAGRUNT_VERSION=v0.54.9
 ENV TERRAMATE_VERSION=v0.2.12
 
 USER root
-RUN apk add --no-cache aws-cli vault libcap-setcap --repository=http://dl-cdn.alpinelinux.org/alpine/v3.18/community
+RUN apk add --no-cache aws-cli findutils libcap-setcap vault --repository=http://dl-cdn.alpinelinux.org/alpine/v3.18/community
 RUN setcap cap_ipc_lock= /usr/sbin/vault
 
 # infracost
